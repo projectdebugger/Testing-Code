@@ -92,7 +92,7 @@ public class Carpark implements ICarpark {
 	public float calculateAddHocTicketCharge(long entryDateTime) {
 		//TODO Implement charge logic
                 
-                System.out.print("In calculateAddHocTicketCharge function\n There is only value which is returned which is 3.0\nNo function to calculate real values.");
+                System.out.println("In calculateAddHocTicketCharge function\nThere is a only value which is returned is 3.0.\nNo function to calculate real values.");
 		return 3.0f;
 	}
 
