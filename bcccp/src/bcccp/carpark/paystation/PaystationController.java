@@ -130,7 +130,7 @@ public class PaystationController
 	
 	@Override
 	public void ticketTaken() {
-            System.out.println("In ticketTaken Function.");
+            System.out.println("In ticketTaken Function.");//------- Testing ticke taken.
 		if (state_ == STATE.IDLE) {
                         System.out.println("State is idle.");
 			ui_.beep();
