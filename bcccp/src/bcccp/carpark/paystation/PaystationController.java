@@ -75,10 +75,10 @@ public class PaystationController
 	@Override
 	public void ticketInserted(String barcode) {
 		if (true) {// Made amendments for testing.
-                        System.out.println("In TicketInserted function.");//----testing.
+                        System.out.println("In ticketInserted function.");//----testing.
                         adhocTicket_ = carpark_.getAdhocTicket(barcode);
-			
                         if (adhocTicket_ != null) {
+                                System.out.println("Calculating chrages");
 				charge_ = carpark_.calculateAddHocTicketCharge(adhocTicket_.getEntryDateTime());
 				ui_.display("Pay " + String.format("%.2f", charge_));
 				setState(STATE.WAITING);

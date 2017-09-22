@@ -83,11 +83,16 @@ public class Carpark implements ICarpark {
 		return adhocTicketDAO.findTicketByBarcode(barcode);
 	}
 	
-	
-		
+	/**
+        *@Author Harkanav Bir Singh Badwal
+        * 
+        */
+
 	@Override
 	public float calculateAddHocTicketCharge(long entryDateTime) {
 		//TODO Implement charge logic
+                
+                System.out.print("In calculateAddHocTicketCharge function\n There is only value which is returned which is 3.0\nNo function to calculate real values.");
 		return 3.0f;
 	}
 
