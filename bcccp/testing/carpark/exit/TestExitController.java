@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package carpark.exit;
 
 import bcccp.carpark.exit.ExitController;
@@ -47,5 +52,29 @@ public class ExitControllerTest {
         fail("The test case is a prototype.");
     }
 
+    /**
+     * Test of ticketInserted method, of class ExitController.
+     */
+    @Test
+    public void testTicketInserted() {
+        System.out.println("ticketInserted");
+        String ticketStr = "";
+        ExitController instance = null;
+        instance.ticketInserted(ticketStr);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of ticketTaken method, of class ExitController.
+     */
+    @Test
+    public void testTicketTaken() {
+        System.out.println("ticketTaken");
+        ExitController instance = null;
+        instance.ticketTaken();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }
