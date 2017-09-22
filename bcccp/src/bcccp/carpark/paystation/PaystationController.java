@@ -108,7 +108,7 @@ public class PaystationController
                         long payTime = System.currentTimeMillis();
 			
 			adhocTicket_.pay(payTime, charge_);
-			System.out.println("Storing current time of payment.");
+			System.out.println("Storing current time of payment.");//----------Print on screen
 			String carparkId = adhocTicket_.getCarparkId();
 			int ticketNo = adhocTicket_.getTicketNo();
 			long entryTime = adhocTicket_.getEntryDateTime();
@@ -118,7 +118,7 @@ public class PaystationController
 			
 			ui_.printTicket(carparkId, ticketNo, entryTime, paidTime, charge, barcode);
 			setState(STATE.PAID);
-                        System.out.println("Set state to paid.");
+                        System.out.println("Set state to paid.");//----------Print on screen
 		}
 		else {
 			ui_.beep();
@@ -130,11 +130,14 @@ public class PaystationController
 	
 	@Override
 	public void ticketTaken() {
+            System.out.println("In ticketTaken Function.");
 		if (state_ == STATE.IDLE) {
+                        System.out.println("State is idle.");
 			ui_.beep();
 			log("ticketTaken: called while in incorrect state");				
 		}
 		else {
+                    System.out.println("Ticket is taken and state is set to idle.");
 			setState(STATE.IDLE);
 		}
 	}
