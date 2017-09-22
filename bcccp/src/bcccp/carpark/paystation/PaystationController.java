@@ -67,17 +67,18 @@ public class PaystationController
 			
 		}			
 	}
-/* Author: HARKANAV BIR SINGH BADWAL
- +   	 * Unit Testing TICKET INSERTED
- +	 * */
-	
+/**
+ *@Author Harkanav Bir Singh Badwal
+ * 
+ */
 	
 	@Override
 	public void ticketInserted(String barcode) {
-		if (state_ == STATE.IDLE) {
-                        //Entering IDLE state.
-                        System.out.println("State = IDEAL.");
-			adhocTicket_ = carpark_.getAdhocTicket(barcode);
+		if (true) {// Made amendments for testing.
+                        System.out.println("In TicketInserted function.");//----testing.
+                        
+                        
+                        adhocTicket_ = carpark_.getAdhocTicket(barcode);
 			if (adhocTicket_ != null) {
 				charge_ = carpark_.calculateAddHocTicketCharge(adhocTicket_.getEntryDateTime());
 				ui_.display("Pay " + String.format("%.2f", charge_));

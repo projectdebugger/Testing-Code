@@ -79,6 +79,7 @@ public class Carpark implements ICarpark {
 	
 	@Override
 	public IAdhocTicket getAdhocTicket(String barcode) {
+                
 		return adhocTicketDAO.findTicketByBarcode(barcode);
 	}
 	
