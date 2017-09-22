@@ -78,20 +78,20 @@ public class PaystationController
                         System.out.println("In ticketInserted function.");//----testing.
                         adhocTicket_ = carpark_.getAdhocTicket(barcode);
                         if (adhocTicket_ != null) {
-                                System.out.println("Calculating chrages");
+                                System.out.println("Calculating chrages");//--------- Comments.
 				charge_ = carpark_.calculateAddHocTicketCharge(adhocTicket_.getEntryDateTime());
 				ui_.display("Pay " + String.format("%.2f", charge_));
                                 setState(STATE.WAITING);
 			}
 			else {
-                                System.out.println("In ");
-				ui_.beep();
+                                ui_.beep();
 				ui_.display("Take Rejected Ticket");
 				setState(STATE.REJECTED);
 				log("ticketInserted: ticket is not current");				
 			}
 		}
 		else {
+                        System.out.println("If system is in use. The else part will work.");//-----------Comments
 			ui_.beep();
 			log("ticketInserted: called while in incorrect state");				
 		}
@@ -101,11 +101,14 @@ public class PaystationController
 	
 	@Override
 	public void ticketPaid() {
+                //------------------------- Ticket function testing.
+                        System.out.println("In ticketPaid function.");
+			
 		if (state_ == STATE.WAITING) {
-			long payTime = System.currentTimeMillis();
+                        long payTime = System.currentTimeMillis();
 			
 			adhocTicket_.pay(payTime, charge_);
-			
+			System.out.println("Storing current time of payment.");
 			String carparkId = adhocTicket_.getCarparkId();
 			int ticketNo = adhocTicket_.getTicketNo();
 			long entryTime = adhocTicket_.getEntryDateTime();
@@ -115,6 +118,7 @@ public class PaystationController
 			
 			ui_.printTicket(carparkId, ticketNo, entryTime, paidTime, charge, barcode);
 			setState(STATE.PAID);
+                        System.out.println("Set state to paid.");
 		}
 		else {
 			ui_.beep();
