@@ -60,16 +60,6 @@ public class ExitControllerTest {
         fail("The test case is a prototype.");
     }
 
-   /**
-     * Test of ticketTaken method, of class ExitController.
-     */
-    @Test
-    public void testTicketTaken() {
-        System.out.println("ticketTaken");
-        ExitController instance = null;
-        instance.ticketTaken();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    } 
+    
     
 }
