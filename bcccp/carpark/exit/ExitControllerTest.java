@@ -20,7 +20,7 @@ public class ExitControllerTest {
         exit.carEventDetected("S1111", true);
         
         //14th commit test carEventDetected and set state as idle
-        exit.carEventDetected("S1111", true);
+      
         
         
         
