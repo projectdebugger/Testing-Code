@@ -22,6 +22,10 @@ public class TestSeasonTicket {
        System.out.println("Throwing an exception when Start Date is less than or equal to zero.");
        SeasonTicket ticket3 = new SeasonTicket("S0011","CP3",0,120320170 ); 
        System.out.println("Your Ticket Start at : "+ ticket3.getStartValidPeriod());
+       System.out.println("Throwing an exception when End Date is less than or equal to start date.");
+       SeasonTicket ticket4 = new SeasonTicket("S0011","CP3",12032017,120320170 ); 
+       System.out.println("Your Ticket Start at : "+ ticket4.getStartValidPeriod());
+
          
         
 
